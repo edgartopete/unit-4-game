@@ -1,0 +1,23 @@
+body{
+    background-image: url("../img/back.jpg");
+    
+}
+.imgSize{
+    height:150px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#div1 {
+    width: 102px;
+    height: 152px;
+    border: 2px solid green;
+  }
+  #div2 {
+    width: 102px;
+    height: 152px;
+    border: 2px solid red;
+  }

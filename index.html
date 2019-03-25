@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RPG Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css">
+    <script src="./assets/js/script.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-5">
+                <div class="alert alert-dark" role="alert">
+                    <h4 class="alert-heading">Welcome to the Star Wars RPG</h4>
+                    <p>Follow the instrctions to start playing</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-8">
+                <div class="row">
+                    <div class="alert alert-dark col-lg-10" role="alert">
+                        <h5 class="alert-heading">Select a character and drag it to the Challeger then drag a charater to the Defender area</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="divhan"class="card text-center" style="width: 10rem;">
+                        <img id="han" src="./assets/img/hansolo.jpg" class="card-img-top imgSize" draggable="true"
+                            ondragstart="drag(event)" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Strength of 285</p>
+                        </div>
+                    </div>
+                    <div id="divluke" class="card text-center" style="width: 10rem;">
+                        <img id="luke" src="./assets/img/luke.png" class="card-img-top imgSize" draggable="true"
+                            ondragstart="drag(event)" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Strength of 250</p>
+                        </div>
+                    </div>
+                    <div id="divdarth" class="card text-center" style="width: 10rem;">
+                        <img id="darth" src="./assets/img/darth.jpeg" class="card-img-top imgSize" draggable="true"
+                            ondragstart="drag(event)" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Strength of 300</p>
+                        </div>
+                    </div>
+                    <div id="divstorm" class="card text-center" style="width: 10rem;">
+                        <img id="storm" src="./assets/img/stormt.jpg" class="card-img-top imgSize" draggable="true"
+                            ondragstart="drag(event)" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Strength of 150</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col col-lg-2">
+                <div class="row">
+                    <div class="alert alert-dark" role="alert">
+                        <h5 class="alert-heading">Challenger</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="div1"  class="option"  ondrop="drop(event)" ondragover="allowDrop(event)" data-active="0"></div>
+                </div>
+                <div class="row">
+                    <div class="alert alert-dark col-lg-7" role="alert">
+                       <p>Life:<span id="userLife"></span></p>
+                       <p>Attack:<span id="userAttack"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-2">
+                    <div class="row">
+                        <div class="alert alert-dark" role="alert">
+                            <h5 class="alert-heading">Defender</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="div2" class="option" ondrop="drop(event)" ondragover="allowDrop(event)" data-active="0"></div>
+                    </div>
+                    <div class="row">
+                        <div class="alert alert-dark col-lg-7" role="alert">
+                           <p>Life:<span id="compLife"></span></p>
+                           <p>Attack:<span id="compAttack"></span></p>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col col-lg-8">
+
+            </div>
+            <div class="col col-lg-4">
+                    <button id="attack" type="button" class="btn btn-danger col-lg-10" disabled="true">Attack</button>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
